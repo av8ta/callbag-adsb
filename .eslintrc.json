@@ -1,0 +1,55 @@
+{
+  /* https://github.com/mysticatea/eslint-plugin-node/issues/236#issuecomment-1111454900 */
+  "env": {
+    "es2020": true,
+    "node": true
+  },
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "node"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:node/recommended"
+  ],
+  "rules": {
+    "node/no-missing-import": 0, // needs to be off so it doesn't error on missing .js files that will be present when compiled
+    "node/file-extension-in-import": [ // this is the config for the plugin that lints & "quick fixes" missing file extensions
+      "error",
+      "always",
+      {
+        "tryExtensions": [
+          ".js",
+          ".json",
+          ".node"
+        ],
+        ".js": "always",
+        ".ts": "always"
+      }
+    ],
+    "node/no-unsupported-features/es-syntax": [
+      "error",
+      {
+        "ignores": [
+          "modules"
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "directory": "./tsconfig.json"
+      }
+    }
+  }
+}

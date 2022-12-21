@@ -1,0 +1,51 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "av8ta",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./lib/index.cjs",
+      "import": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts",
+    "watch": "tsup src/index.ts --watch",
+    "test": "ts-node-test test",
+    "test:watch": "nodemon node_modules/ts-node-test/dist/bin.js test",
+    "lint": "eslint --ext .js,.ts .",
+    "fix": "npm run lint --fix",
+    "clean": "rimraf lib",
+    "prepublishOnly": "npm run clean && npm run fix && npm run build && npm run test"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "files": [
+    "/lib"
+  ],
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "target": [
+      "node14"
+    ],
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "outDir": "lib",
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true,
+    "dts": true
+  }
+}

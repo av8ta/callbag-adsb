@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "ESM",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./lib",
+    "target": "esnext",
+    "module": "esnext",
+    "lib": [
+      "esnext"
+    ],
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noEmit": false,
+    "sourceMap": true,
+    "stripInternal": true,
+    "skipLibCheck": false,
+    "importsNotUsedAsValues": "error",
+    "declaration": true,
+    "experimentalDecorators": true,
+    // "emitDecoratorMetadata": true,
+    "downlevelIteration": true,
+    "allowUnreachableCode": false,
+    "checkJs": true,
+    "pretty": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "typeRoots": [
+    "./types/",
+    "./node_modules/@types/"
+  ],
+  "ts-node": {
+    "esm": true /* instruct ts-node cli to install the --loader - needed for coderunner vscode extension */
+  }
+}
