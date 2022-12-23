@@ -54,7 +54,6 @@ function assertData(data: string[]): asserts data is string[] {
   assert(data)
   assert(data.length === 7) 
   const [callsign, ...rest] = data
-  console.log(callsign)
   assert(callsign?.slice(0,1) === '!')
   const floats = rest.slice(0, rest.length - 1)
   assert.doesNotThrow(() => floats.forEach(checkNumberString))
