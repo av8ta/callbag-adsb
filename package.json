@@ -1,8 +1,14 @@
 {
-  "name": "",
+  "name": "callbag-adsb",
   "version": "1.0.0",
   "description": "",
-  "keywords": [],
+  "keywords": [
+    "ads-b",
+    "callbags",
+    "callbag-net",
+    "flight-tracking",
+    "real-time-flight-tracking"
+  ],
   "author": "av8ta",
   "license": "MIT",
   "type": "module",
@@ -17,24 +23,42 @@
     }
   },
   "scripts": {
-    "build": "tsup src/index.ts",
+    "build": "tsup src/index.ts --env.NODE_ENV production",
     "watch": "tsup src/index.ts --watch",
-    "test": "ts-node-test test",
-    "test:watch": "nodemon node_modules/ts-node-test/dist/bin.js test",
+    "test": "TS_NODE_IGNORE_DIAGNOSTICS=7016 ts-node-test test",
+    "test:watch": "tsup src/index.ts --watch --onSuccess 'npm run test'",
     "lint": "eslint --ext .js,.ts .",
     "fix": "npm run lint --fix",
     "clean": "rimraf lib",
     "prepublishOnly": "npm run clean && npm run fix && npm run build && npm run test"
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "callbag-basics-esmodules": "^4.0.0",
+    "callbag-net": "^1.2.0",
+    "debug": "^4.3.4",
+    "decoder1090-c": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.7",
+    "@types/node": "^18.11.17",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
+    "callbag-last": "^1.1.4",
+    "callbag-subscribe": "^1.5.1",
+    "eslint": "^8.30.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "nodemon": "^2.0.20",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "ts-node-test": "^0.2.0",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.4"
+  },
   "files": [
     "/lib"
   ],
   "tsup": {
-    "entry": [
-      "src/index.ts"
-    ],
     "target": [
       "node14"
     ],
@@ -47,5 +71,11 @@
     "sourcemap": true,
     "clean": true,
     "dts": true
+  },
+  "volta": {
+    "node": "18.8.0"
+  },
+  "engines": {
+    "node": ">=18.8.0"
   }
 }

@@ -42,10 +42,11 @@
     "noUncheckedIndexedAccess": true
   },
   "include": [
-    "./src/**/*"
+    "./src/**/*",
+    "./typings/**/*"
   ],
   "typeRoots": [
-    "./types/",
+    "./typings/",
     "./node_modules/@types/"
   ],
   "ts-node": {
