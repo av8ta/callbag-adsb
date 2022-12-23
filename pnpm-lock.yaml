@@ -8,6 +8,7 @@ specifiers:
   callbag-basics-esmodules: ^4.0.0
   callbag-last: ^1.1.4
   callbag-net: ^1.2.0
+  callbag-observe: ^1.0.0
   callbag-subscribe: ^1.5.1
   debug: ^4.3.4
   decoder1090-c: ^1.0.1
@@ -33,6 +34,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.47.0_ncmi6noazr3nzas7jxykisekym
   '@typescript-eslint/parser': 5.47.0_lzzuuodtsqwxnvqeq4g4likcqa
   callbag-last: 1.1.4
+  callbag-observe: 1.0.0
   callbag-subscribe: 1.5.1
   eslint: 8.30.0
   eslint-plugin-import: 2.26.0_tqyj5ytb5g6r5ett7xxedhk6eq
@@ -541,6 +543,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: false
+
+  /callbag-observe/1.0.0:
+    resolution: {integrity: sha512-ZwNu0qvbyNQMw0pHnbn+Zdmfe0FvHlzQy28b84Ba4kg5O6F/LrVB9/ljGN5hqf6OXYukk38ThhmM/NPdkmrH9w==}
+    dev: true
 
   /callbag-pipe/1.1.1:
     resolution: {integrity: sha512-gPTHExrElPAOu/s91aySM1dCGCuQhbTLvvHwrqI/2aMW0qOda2nCZpmE0ML94l2tDy6Y4fqlI1SyAxqgLkZl6w==}
@@ -1985,8 +1991,8 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rollup/3.8.0:
-    resolution: {integrity: sha512-+UR6PnUslneJNiJfLSzy4XH6R50ZGF0MS7UCv20ftXrktF/TkvZDwiBtXX65esblLR5p8w6LmXgPwt2f2B8SoQ==}
+  /rollup/3.8.1:
+    resolution: {integrity: sha512-4yh9eMW7byOroYcN8DlF9P/2jCpu6txVIHjEqquQVSx7DI0RgyCCN3tjrcy4ra6yVtV336aLBB3v2AarYAxePQ==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -2279,7 +2285,7 @@ packages:
       joycon: 3.1.1
       postcss-load-config: 3.1.4_ts-node@10.9.1
       resolve-from: 5.0.0
-      rollup: 3.8.0
+      rollup: 3.8.1
       source-map: 0.8.0-beta.0
       sucrase: 3.29.0
       tree-kill: 1.2.2

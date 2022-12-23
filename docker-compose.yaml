@@ -1,0 +1,11 @@
+version: '3'
+services:
+  dump1090:
+    restart: always
+    devices:
+      - /dev/bus/usb
+    container_name: dump1090
+    ports:
+      - '8080:8080'
+      - '30002:30002'
+    image: 'jraviles/dump1090:latest'
