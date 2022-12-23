@@ -7,6 +7,7 @@ import decoder from 'decoder1090-c'
 import assert from 'node:assert'
 import Debug from 'debug'
 import { checkNumberString, isIntegerString, checkIntegerString, isString } from './util.js'
+export { AdsbData }
 
 const log = Debug('callbag-adsb')
 
@@ -52,9 +53,9 @@ function split(data: string): string[] | null {
 
 function assertData(data: string[]): asserts data is string[] {
   assert(data)
-  assert(data.length === 7) 
+  assert(data.length === 7)
   const [callsign, ...rest] = data
-  assert(callsign?.slice(0,1) === '!')
+  assert(callsign?.slice(0, 1) === '!')
   const floats = rest.slice(0, rest.length - 1)
   assert.doesNotThrow(() => floats.forEach(checkNumberString))
   const timestamp = rest[5]?.substring(0, rest[5].length - 1)
