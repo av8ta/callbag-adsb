@@ -1,6 +1,6 @@
 {
   "name": "callbag-adsb",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "keywords": [
     "ads-b",
@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "callbag-basics-esmodules": "^4.0.0",
-    "callbag-net": "^1.2.0",
+    "callbag-net": "^1.2.1",
     "debug": "^4.3.4",
     "decoder1090-c": "^1.0.1"
   },

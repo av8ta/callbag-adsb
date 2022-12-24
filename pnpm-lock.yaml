@@ -7,7 +7,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.46.1
   callbag-basics-esmodules: ^4.0.0
   callbag-last: ^1.1.4
-  callbag-net: ^1.2.0
+  callbag-net: ^1.2.1
   callbag-observe: ^1.0.0
   callbag-subscribe: ^1.5.1
   debug: ^4.3.4
@@ -23,7 +23,7 @@ specifiers:
 
 dependencies:
   callbag-basics-esmodules: 4.0.0
-  callbag-net: 1.2.0
+  callbag-net: 1.2.1
   debug: 4.3.4
   decoder1090-c: 1.0.1
 
@@ -530,8 +530,8 @@ packages:
     resolution: {integrity: sha512-jhgsa8zNCZZRy9seJs+ZLZDZ3l1xTrEFg6IXOoD57+vaq9bAqPG657ubVbhIaonc/Z882oZLelAs9m6r+F/z8w==}
     dev: false
 
-  /callbag-net/1.2.0:
-    resolution: {integrity: sha512-YpbuSU4I51uzRqGTZOVNeEi/e4vVY5lJ/T1157szTLpECxwa2gFjy6xMWzIlTJcTIhkupcHLkhnYQOm2u//QwQ==}
+  /callbag-net/1.2.1:
+    resolution: {integrity: sha512-ZjIOY+Y3jpLjjJh4QZe0WLVRyTWI8SRJtF4FrupjgaWzIumVqcIXdJZA8sHaSad4U38vjAkzapTOOOJxSvLVDg==}
     dependencies:
       debug: 4.3.4
     transitivePeerDependencies:
